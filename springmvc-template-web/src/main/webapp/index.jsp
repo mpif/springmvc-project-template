@@ -1,0 +1,1 @@
+springmvc-template-web startup successful!
