@@ -1,5 +1,8 @@
 package com.codefans.template.springextension.container;
 
+import com.codefans.template.common.util.DateUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.web.context.WebApplicationContext;
@@ -10,6 +13,8 @@ import org.springframework.web.context.support.WebApplicationContextUtils;
 import org.springframework.web.servlet.support.RequestContextUtils;
 
 import javax.servlet.http.HttpServletRequest;
+import java.text.ParseException;
+import java.util.Date;
 
 /**
  * @Author: codefans
@@ -18,11 +23,21 @@ import javax.servlet.http.HttpServletRequest;
 
 public class BeanPostProcessorExtension implements BeanPostProcessor {
 
+    /**
+     *
+     */
+    private Logger log = LoggerFactory.getLogger(BeanPostProcessorExtension.class);
+
     @Override
     public Object postProcessBeforeInitialization(Object obj, String beanName) throws BeansException {
 
         String applicationName = "";
         String displayName = "";
+        try {
+            log.info("BeanPostProcessorExtension.postProcessBeforeInitialization(), time={}", DateUtils.format(new Date()));
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
 
 //        try {
 //            RequestAttributes requestAttr = RequestContextHolder.currentRequestAttributes();
@@ -38,7 +53,7 @@ public class BeanPostProcessorExtension implements BeanPostProcessor {
 //            e.printStackTrace();
 //        }
 
-        System.out.println("before initialization, beanName=" + beanName + ", applicationName=" + applicationName + ", displayName=" + displayName);
+//        System.out.println("before initialization, beanName=" + beanName + ", applicationName=" + applicationName + ", displayName=" + displayName);
 
         return obj;
     }
@@ -49,6 +64,12 @@ public class BeanPostProcessorExtension implements BeanPostProcessor {
         String applicationName = "";
         String displayName = "";
 
+        try {
+            log.info("BeanPostProcessorExtension.postProcessAfterInitialization(), time={}", DateUtils.format(new Date()));
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+
 //        try {
 //            RequestAttributes requestAttr = RequestContextHolder.currentRequestAttributes();
 //            if (!(requestAttr instanceof ServletRequestAttributes)) {
@@ -63,7 +84,7 @@ public class BeanPostProcessorExtension implements BeanPostProcessor {
 //            e.printStackTrace();
 //        }
 
-        System.out.println("after initialization, beanName=" + beanName + ", applicationName=" + applicationName + ", displayName=" + displayName);
+//        System.out.println("after initialization, beanName=" + beanName + ", applicationName=" + applicationName + ", displayName=" + displayName);
 
         return obj;
     }

@@ -9,7 +9,7 @@
     <appender name="FILE" class="org.apache.log4j.DailyRollingFileAppender">
         <param name="Encoding" value="UTF-8"/>
         <param name="Threshold" value="INFO" />
-        <param name="File" value="D:/letv/Logs/springmvc-template/${serverName}/marketing-restapi.log"/>
+        <param name="File" value="D:/Logs/springmvc-template/${serverName}/springmvc-template.log"/>
         <layout class="org.apache.log4j.PatternLayout">
             <param name="ConversionPattern" value="[%5p] [%d{yyyy-MM-dd HH:mm:ss SSS}] (%F:%L) %m%n"/>
         </layout>
@@ -22,7 +22,7 @@
 	
     <root>
         <priority value="info"/>
-         <!-- <appender-ref ref="CONSOLE"/>-->
-       <appender-ref ref="FILE"/>
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="FILE"/>
     </root>
 </log4j:configuration>

@@ -20,4 +20,11 @@
         -->
 	<bean class="com.codefans.template.springextension.container.BeanPostProcessorExtension"/>
 
+	<bean class="com.codefans.template.springextension.container.ApplicationListenerExtension"/>
+	<bean name="beanFactoryPostProcessorExtension" class="com.codefans.template.springextension.container.BeanFactoryPostProcessorExtension"/>
+	<bean class="com.codefans.template.springextension.container.BeanFactoryAwareExtension"/>
+	<bean class="com.codefans.template.springextension.container.InitializingBeanExtension"/>
+	<bean class="com.codefans.template.springextension.container.DisposableBeanExtension"/>
+	<bean class="com.codefans.template.springextension.container.FactoryBeanExtension"/>
+
 </beans>
