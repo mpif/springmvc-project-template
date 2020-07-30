@@ -1,5 +1,5 @@
 //package com.codefans.template.web.controller;/**
-// * Created by caishengzhi on 2017/6/26.
+// * Created by codefans on 2017/6/26.
 // */
 //
 //import com.alibaba.dubbo.common.utils.StringUtils;
@@ -46,7 +46,7 @@
 //
 //    /**
 //     * @Description: 店员和客户关系绑定
-//     * @author caishengzhi
+//     * @author codefans
 //     * @param
 //     * @date 2017-06-29 16:55
 //     */
@@ -109,7 +109,7 @@
 //
 //    /**
 //     * @Description: 添加店员
-//     * @author caishengzhi
+//     * @author codefans
 //     * @param
 //     * @date 2017-05-11 09:05
 //     */
@@ -151,7 +151,7 @@
 //
 //    /**
 //     * @Description: 获取首页业绩信息详情
-//     * @author caishengzhi
+//     * @author codefans
 //     * @param
 //     * @date 2017-05-02 14:09
 //     */
@@ -188,7 +188,7 @@
 //
 //    /**
 //     * @Description: 获取首页理财列表
-//     * @author caishengzhi
+//     * @author codefans
 //     * @param
 //     * @date 2017-05-15 09:46
 //     */
@@ -227,7 +227,7 @@
 //
 //    /**
 //     * @Description: 获取个人业绩列表
-//     * @author caishengzhi
+//     * @author codefans
 //     * @param
 //     * @date 2017-05-04 09:43
 //     */
@@ -268,7 +268,7 @@
 //
 //    /**
 //     * @Description: 获取团队业绩列表
-//     * @author caishengzhi
+//     * @author codefans
 //     * @param
 //     * @date 2017-05-04 21:08
 //     */
@@ -312,7 +312,7 @@
 //
 //    /**
 //     * @Description: 获取客户详情列表
-//     * @author caishengzhi
+//     * @author codefans
 //     * @param
 //     * @date 2017-04-28 11:09
 //     */
@@ -355,7 +355,7 @@
 //
 //    /**
 //     * @Description: 获取客户详情
-//     * @author caishengzhi
+//     * @author codefans
 //     * @param
 //     * @date 2017-05-20 19:23
 //     */
@@ -395,7 +395,7 @@
 //
 //    /**
 //     * @Description: 获取个人详细信息
-//     * @author caishengzhi
+//     * @author codefans
 //     * @param
 //     * @date 2017-05-10 09:17
 //     */
@@ -432,7 +432,7 @@
 //
 //    /**
 //     * @Description: 获取我的店铺
-//     * @author caishengzhi
+//     * @author codefans
 //     * @param
 //     * @date 2017-05-10 09:40
 //     */
@@ -469,7 +469,7 @@
 //
 //    /**
 //     * @Description: 获取店长的某家店铺
-//     * @author caishengzhi
+//     * @author codefans
 //     * @param
 //     * @date 2017-05-20 21:10
 //     */
@@ -508,7 +508,7 @@
 //
 //    /**
 //     * @Description: 获取店铺人员列表
-//     * @author caishengzhi
+//     * @author codefans
 //     * @param
 //     * @date 2017-05-10 09:40
 //     */
@@ -548,7 +548,7 @@
 //
 //    /**
 //     * @Description: 移除店员
-//     * @author caishengzhi
+//     * @author codefans
 //     * @param
 //     * @date 2017-05-10 09:55
 //     */
@@ -587,7 +587,7 @@
 //
 //    /**
 //     * @Description: 修改店员所属门店
-//     * @author caishengzhi
+//     * @author codefans
 //     * @param
 //     * @date 2017-05-10 13:12
 //     */
