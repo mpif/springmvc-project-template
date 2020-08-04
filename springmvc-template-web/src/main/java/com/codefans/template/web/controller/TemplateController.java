@@ -30,8 +30,8 @@ public class TemplateController {
     @Resource
     private WxService wxService;
 
-    @Resource
-    private AppConfig appConfig;
+//    @Resource
+//    private AppConfig appConfig;
 
     @RequestMapping(method= {RequestMethod.GET,RequestMethod.POST}, value="/index")
     @ResponseBody
@@ -52,7 +52,7 @@ public class TemplateController {
             Map<String, String> dataMap = new HashMap<String, String>();
             dataMap.put("xmlParam", xmlParam);
             dataMap.put("message", "welcome to springmvc testing program");
-            dataMap.put("appConfig", appConfig.toString());
+//            dataMap.put("appConfig", appConfig.toString());
 
             message = Messages.success(JSON.toJSONString(dataMap));
 

@@ -1,0 +1,1 @@
+org.springframework.context.ApplicationListener=\com.codefans.template.springextension.container.CustomApplicationListener

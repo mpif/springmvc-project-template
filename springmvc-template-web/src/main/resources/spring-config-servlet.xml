@@ -28,9 +28,9 @@
         </mvc:message-converters>
     </mvc:annotation-driven>
 
-    <mvc:resources mapping="/wx/*" location="/wx/"></mvc:resources>
+<!--    <mvc:resources mapping="/wx/*" location="/wx/"></mvc:resources>-->
 
-    <!--<mvc:default-servlet-handler/>-->
+    <mvc:default-servlet-handler/>
 
     <!--&lt;!&ndash;配置拦截器 拦截除了exceptUrls内的所有请求&ndash;&gt;-->
     <!--<mvc:interceptors>-->

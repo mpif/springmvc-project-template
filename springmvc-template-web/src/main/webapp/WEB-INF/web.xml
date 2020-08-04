@@ -20,7 +20,7 @@
 
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
-		<param-value>classpath:spring-config*.xml</param-value>
+		<param-value>classpath:spring-config.xml</param-value>
 	</context-param>
 	<servlet>
 		<servlet-name>springmvc</servlet-name>
@@ -33,7 +33,7 @@
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>springmvc</servlet-name>
-		<url-pattern>/*</url-pattern>
+		<url-pattern>/</url-pattern>
 	</servlet-mapping>
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>

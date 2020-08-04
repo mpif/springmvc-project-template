@@ -28,13 +28,26 @@ public class BeanPostProcessorExtension implements BeanPostProcessor {
      */
     private Logger log = LoggerFactory.getLogger(BeanPostProcessorExtension.class);
 
+    /**
+     *
+     */
+    private boolean firstBefore = false;
+
+    /**
+     *
+     */
+    private boolean firstAfter = false;
+
     @Override
     public Object postProcessBeforeInitialization(Object obj, String beanName) throws BeansException {
 
         String applicationName = "";
         String displayName = "";
         try {
-            log.info("BeanPostProcessorExtension.postProcessBeforeInitialization(), time={}", DateUtils.format(new Date()));
+            if(!firstBefore) {
+                log.info("BeanPostProcessorExtension.postProcessBeforeInitialization(), time={}", DateUtils.format(new Date()));
+                firstBefore = true;
+            }
         } catch (ParseException e) {
             e.printStackTrace();
         }
@@ -65,7 +78,10 @@ public class BeanPostProcessorExtension implements BeanPostProcessor {
         String displayName = "";
 
         try {
-            log.info("BeanPostProcessorExtension.postProcessAfterInitialization(), time={}", DateUtils.format(new Date()));
+            if(!firstAfter) {
+                log.info("BeanPostProcessorExtension.postProcessAfterInitialization(), time={}", DateUtils.format(new Date()));
+                firstAfter = true;
+            }
         } catch (ParseException e) {
             e.printStackTrace();
         }

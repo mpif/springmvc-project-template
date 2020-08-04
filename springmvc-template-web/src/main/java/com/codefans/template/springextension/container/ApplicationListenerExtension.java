@@ -12,6 +12,7 @@ import org.springframework.context.ApplicationEvent;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.PayloadApplicationEvent;
 import org.springframework.context.event.*;
+import org.springframework.stereotype.Component;
 import org.springframework.web.context.support.RequestHandledEvent;
 import org.springframework.web.context.support.ServletRequestHandledEvent;
 
@@ -23,6 +24,7 @@ import org.springframework.web.context.support.ServletRequestHandledEvent;
  * @date 2020/07/23 17:15
  * @since 1.0.0
  */
+@Component
 public class ApplicationListenerExtension implements ApplicationListener {
 
     @Override

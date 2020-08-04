@@ -1,5 +1,8 @@
 package com.codefans.template.springextension.xml.parser;
 
+import com.codefans.template.springextension.xml.handler.MyFrameworkNamespaceHandler;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.beans.factory.support.RootBeanDefinition;
 import org.springframework.beans.factory.xml.BeanDefinitionParser;
@@ -16,6 +19,9 @@ public class MyFrameworkBeanDefinitionParser implements BeanDefinitionParser {
 
     private final boolean required;
 
+    private Logger log = LoggerFactory.getLogger(MyFrameworkBeanDefinitionParser.class);
+
+
     public MyFrameworkBeanDefinitionParser(Class<?> beanClass, boolean required) {
         this.beanClass = beanClass;
         this.required = required;
@@ -27,6 +33,8 @@ public class MyFrameworkBeanDefinitionParser implements BeanDefinitionParser {
     }
 
     public BeanDefinition parse(Element element, ParserContext parserContext, Class<?> beanClass, boolean required) {
+
+        log.info("MyFrameworkBeanDefinitionParser.parse() method called......");
 
         RootBeanDefinition beanDefinition = new RootBeanDefinition();
         beanDefinition.setBeanClass(beanClass);
