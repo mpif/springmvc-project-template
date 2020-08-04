@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--自动注入工厂-->
+    <bean id="jobFactory" class="com.codefans.template.scheduler.JobFactory"/>
+    <!-- 总配置 -->
+    <bean id="scheduler" class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+        <property name="jobFactory" ref="jobFactory"></property>
+        <!-- 加载 quartz.properties-->
+        <property name="configLocation" value="classpath:quartz.properties"/>
+
+    </bean>
+</beans>

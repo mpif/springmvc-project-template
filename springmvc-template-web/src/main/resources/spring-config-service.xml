@@ -27,4 +27,6 @@
 	<bean class="com.codefans.template.springextension.container.DisposableBeanExtension"/>
 	<bean class="com.codefans.template.springextension.container.FactoryBeanExtension"/>
 
+	<bean class="com.codefans.template.scheduler.SchedulerStartup" init-method="init"/>
+
 </beans>

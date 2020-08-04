@@ -18,6 +18,7 @@ dependencies {
     implementation 'org.springframework:spring-context-support:4.3.14.RELEASE'
     implementation 'org.springframework:spring-expression:4.3.14.RELEASE'
     implementation 'org.springframework:spring-web:4.3.14.RELEASE'
+    implementation 'org.quartz-scheduler:quartz:2.3.2'
     implementation 'org.javassist:javassist:3.22.0-GA'
     implementation 'org.aspectj:aspectjweaver:1.7.2'
     implementation 'org.slf4j:slf4j-api:1.7.5'
