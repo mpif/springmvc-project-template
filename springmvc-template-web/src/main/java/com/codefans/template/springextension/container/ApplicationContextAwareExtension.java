@@ -1,7 +1,7 @@
 /**
  * Copyright (C), 2015-2020, 京东
  * FileName: ApplicationContextAwareExtension
- * Author:   caishengzhi
+ * Author:   codefans
  * Date:     2020/8/4 21:51
  * Description: ApplicationContextAware扩展
  */
@@ -17,7 +17,7 @@ import org.springframework.stereotype.Component;
  *
  * ApplicationContextAware扩展
  *
- * @author caishengzhi
+ * @author codefans
  * @date 2020/08/04 21:51
  * @since 1.0.0
  */

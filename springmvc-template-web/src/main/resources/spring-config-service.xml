@@ -18,14 +18,14 @@
         when the above bean (messenger) is instantiated, this custom
         BeanPostProcessor implementation will output the fact to the system console
         -->
-	<bean class="com.codefans.template.springextension.container.BeanPostProcessorExtension"/>
 
+<!--	<bean class="com.codefans.template.springextension.container.BeanPostProcessorExtension"/>-->
 <!--	<bean class="com.codefans.template.springextension.container.ApplicationListenerExtension"/>-->
-	<bean name="beanFactoryPostProcessorExtension" class="com.codefans.template.springextension.container.BeanFactoryPostProcessorExtension"/>
-	<bean class="com.codefans.template.springextension.container.BeanFactoryAwareExtension"/>
-	<bean class="com.codefans.template.springextension.container.InitializingBeanExtension"/>
-	<bean class="com.codefans.template.springextension.container.DisposableBeanExtension"/>
-	<bean class="com.codefans.template.springextension.container.FactoryBeanExtension"/>
+<!--	<bean name="beanFactoryPostProcessorExtension" class="com.codefans.template.springextension.container.BeanFactoryPostProcessorExtension"/>-->
+<!--	<bean class="com.codefans.template.springextension.container.BeanFactoryAwareExtension"/>-->
+<!--	<bean class="com.codefans.template.springextension.container.InitializingBeanExtension"/>-->
+<!--	<bean class="com.codefans.template.springextension.container.DisposableBeanExtension"/>-->
+<!--	<bean class="com.codefans.template.springextension.container.FactoryBeanExtension"/>-->
 	<bean class="com.codefans.template.springextension.container.PostConstructExtension"/>
 
 	<bean class="com.codefans.template.scheduler.SchedulerStartup" init-method="init"/>

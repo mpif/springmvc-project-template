@@ -1,7 +1,7 @@
 /**
  * Copyright (C), 2015-2020, 京东
  * FileName: DisposibleBeanExtension
- * Author:   caishengzhi
+ * Author:   codefans
  * Date:     2020/7/24 14:24
  * Description: DisposibleBean扩展
  */
@@ -20,7 +20,7 @@ import java.util.Date;
  *
  * DisposibleBean扩展
  *
- * @author caishengzhi
+ * @author codefans
  * @date 2020/07/24 14:24
  * @since 1.0.0
  */

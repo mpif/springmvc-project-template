@@ -1,7 +1,7 @@
 /**
  * Copyright (C), 2015-2020, 京东
  * FileName: ApplicationContextUtils
- * Author:   caishengzhi
+ * Author:   codefans
  * Date:     2020/8/4 14:55
  * Description: ApplicationContext工具类
  */

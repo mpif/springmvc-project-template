@@ -1,7 +1,7 @@
 /**
  * Copyright (C), 2015-2020, 京东
  * FileName: CustomApplicationListener
- * Author:   caishengzhi
+ * Author:   codefans
  * Date:     2020/8/4 14:24
  * Description: ApplicationListener实现类
  */
@@ -22,7 +22,7 @@ import org.springframework.web.context.support.ServletRequestHandledEvent;
  *
  * ApplicationListener实现类
  *
- * @author caishengzhi
+ * @author codefans
  * @date 2020/08/04 14:24
  * @since 1.0.0
  */
@@ -32,6 +32,8 @@ public class CustomApplicationListener implements ApplicationListener<Applicatio
      * 日志
      */
     private Logger log = LoggerFactory.getLogger(CustomApplicationListener.class);
+
+
 
     @Override
     public void onApplicationEvent(ApplicationEvent applicationEvent) {
@@ -61,6 +63,8 @@ public class CustomApplicationListener implements ApplicationListener<Applicatio
     public void process(ApplicationContextEvent applicationContextEvent) {
         log.info("-->CustomApplicationListener, applicationContextEvent, source={}", applicationContextEvent.getSource());
         ApplicationContextUtils.setApplicationContext(applicationContextEvent.getApplicationContext());
+
+
     }
 
     /**

@@ -11,6 +11,8 @@
        		http://www.springframework.org/schema/aop/spring-aop.xsd"
 	default-autowire="byName">
 
+	<import resource="classpath*:spring-datamonitor.xml" />
+
 	<!-- <mvc:annotation-driven /> -->
 	<context:component-scan base-package="com.codefans.template" />
 	<aop:aspectj-autoproxy />
@@ -34,6 +36,7 @@
 	<import resource="classpath:spring-config-servlet.xml"/>
 	<import resource="classpath:myframework.xml"/>
 	<import resource="classpath:spring-quartz.xml"/>
+
 
 	<!-- AOP for controllers -->
 	<!--

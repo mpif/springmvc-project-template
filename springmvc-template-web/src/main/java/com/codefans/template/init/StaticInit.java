@@ -1,7 +1,7 @@
 /**
  * Copyright (C), 2015-2020, 京东
  * FileName: StaticInit
- * Author:   caishengzhi
+ * Author:   codefans
  * Date:     2020/8/3 11:33
  * Description: 静态初始化
  */
@@ -16,7 +16,7 @@ import java.util.Date;
  *
  * 静态初始化
  *
- * @author caishengzhi
+ * @author codefans
  * @date 2020/08/03 11:33
  * @since 1.0.0
  */

@@ -1,7 +1,7 @@
 /**
  * Copyright (C), 2015-2020, 京东
  * FileName: InitializingBeanExtension
- * Author:   caishengzhi
+ * Author:   codefans
  * Date:     2020/7/24 14:23
  * Description: InitializingBean扩展
  */

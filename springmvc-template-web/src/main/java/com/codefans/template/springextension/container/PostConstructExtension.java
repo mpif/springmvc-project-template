@@ -1,7 +1,7 @@
 /**
  * Copyright (C), 2015-2020, 京东
  * FileName: PostConstructExtension
- * Author:   caishengzhi
+ * Author:   codefans
  * Date:     2020/7/30 14:58
  * Description: PostConstruct扩展
  */
@@ -17,7 +17,7 @@ import javax.annotation.Resource;
  *
  * PostConstruct扩展
  *
- * @author caishengzhi
+ * @author codefans
  * @date 2020/07/30 14:58
  * @since 1.0.0
  */
