@@ -8,8 +8,6 @@
 package com.codefans.template.circlereference.singleton;
 
 
-import com.codefans.template.circlereference.prototype.PrototypeFieldInjectService1;
-import com.codefans.template.circlereference.prototype.PrototypeFieldInjectService2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
@@ -28,7 +26,7 @@ public class ProxyFieldInjectService1 {
     @Autowired
     private ProxyFieldInjectService2 proxyFieldInjectService2;
 
-    @Async
+
     public void test1() {
 
     }

@@ -2,11 +2,9 @@ package com.codefans.template.web.controller;
 
 import com.codefans.template.domain.CommonResult;
 import com.codefans.template.scheduler.DynamicJobFactory;
-import com.jd.vip.plus.service.InnerConfigService;
 import org.quartz.JobDetail;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -34,11 +32,6 @@ public class SchedulerController {
     String className = "com.codefans.template.scheduler.MyJob";
     String cronExpression = "*/2 * * * * ?";
 
-    /**
-     * 配置中心服务
-     */
-    @Autowired(required = false)
-    private InnerConfigService innerConfigService;
 
     /**
      * 添加一个新任务
@@ -48,9 +41,6 @@ public class SchedulerController {
     public CommonResult add(){
         CommonResult result = new CommonResult();
         try {
-
-            boolean isOpenDataMonitor = innerConfigService.isOpenDataMonitor();
-            log.info("isOpenDataMonitor={}", isOpenDataMonitor);
 
             dynamicJobFactory.addJob(className,cronExpression);
             result.setMessage("添加动态任务成功！");
