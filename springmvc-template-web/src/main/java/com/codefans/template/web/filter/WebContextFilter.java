@@ -2,6 +2,7 @@ package com.codefans.template.web.filter;
 
 import com.codefans.template.common.data.Code;
 import com.codefans.template.common.data.Result;
+import com.codefans.template.common.util.DateUtils;
 import com.codefans.template.common.util.JsonUtils;
 import com.codefans.template.common.util.ValidateUtil;
 import com.codefans.template.web.client.WebContext;
@@ -13,6 +14,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
+import java.text.ParseException;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -27,8 +30,16 @@ public class WebContextFilter implements Filter {
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
             throws IOException, ServletException {
+
         HttpServletRequest req = (HttpServletRequest) request;
         HttpServletResponse resp = (HttpServletResponse) response;
+
+        try {
+            System.out.println("WebContextFilter.doFilter() begin, uri=" + req.getRequestURI() + ", time=" + DateUtils.formatSSS(new Date()));
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+
         Map<String, String[]> params =  req.getParameterMap();
         if (params != null && params.size() > 0) {
             for (Map.Entry<String, String[]> entry : params.entrySet()) {
@@ -56,6 +67,7 @@ public class WebContextFilter implements Filter {
         chain.doFilter(request, response);
         long endTime = System.currentTimeMillis();
         LOGGER.info("requestUrl:" + req.getRequestURI() + ",cost:" + (endTime - startTime));
+//        System.out.println("WebContextFilter.doFilter() end, time=" + new Date());
     }
 
     @Override

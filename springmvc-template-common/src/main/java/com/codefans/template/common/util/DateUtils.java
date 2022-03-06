@@ -32,6 +32,11 @@ public class DateUtils {
 
     private static final String pattern = "yyyy-MM-dd HH:mm:ss";
 
+    /**
+     *
+     */
+    private static final String SS_SSS = "yyyy-MM-dd HH:mm:ss.SSS";
+
     private static ThreadLocal<DateFormat> threadLocal = new ThreadLocal<DateFormat>();
 
     private static Map<String, ThreadLocal<SimpleDateFormat>> sdfMap = new ConcurrentHashMap<String, ThreadLocal<SimpleDateFormat>>();
@@ -50,6 +55,10 @@ public class DateUtils {
         return getDateFormat().format(date);
     }
 
+    public static String formatSSS(Date date) throws ParseException {
+        return format(date, SS_SSS);
+    }
+
     public static Date parse(String strDate) throws ParseException {
         return getDateFormat().parse(strDate);
     }
@@ -66,14 +75,14 @@ public class DateUtils {
                 tl = sdfMap.get(pattern);
                 if (tl == null) {
                     // 只有Map中还没有这个pattern的sdf才会生成新的sdf并放入map
-                    System.out.println("put new sdf of pattern " + pattern + " to map");
+//                    System.out.println("put new sdf of pattern " + pattern + " to map");
 
                     // 这里是关键,使用ThreadLocal<SimpleDateFormat>替代原来直接new SimpleDateFormat
                     tl = new ThreadLocal<SimpleDateFormat>() {
 
                         @Override
                         protected SimpleDateFormat initialValue() {
-                            System.out.println("thread: " + Thread.currentThread() + " init pattern: " + pattern);
+//                            System.out.println("thread: " + Thread.currentThread() + " init pattern: " + pattern);
                             return new SimpleDateFormat(pattern);
                         }
                     };

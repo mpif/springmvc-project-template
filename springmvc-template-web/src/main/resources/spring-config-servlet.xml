@@ -33,19 +33,32 @@
     <mvc:default-servlet-handler/>
 
     <!--&lt;!&ndash;配置拦截器 拦截除了exceptUrls内的所有请求&ndash;&gt;-->
-    <!--<mvc:interceptors>-->
-        <!--<mvc:interceptor>-->
-            <!--<mvc:mapping path="/**"/>-->
-            <!--<bean class="com.codefans.template.web.interceptor.UrlInterceptor">-->
-                <!--<property name="exceptUrls">-->
-                    <!--<list>-->
-                        <!--<value>/wx</value>-->
-                        <!--<value>/wx/</value>-->
-                        <!--&lt;!&ndash;<value>/template</value>&ndash;&gt;-->
-                    <!--</list>-->
-                <!--</property>-->
-            <!--</bean>-->
-        <!--</mvc:interceptor>-->
-    <!--</mvc:interceptors>-->
+    <mvc:interceptors>
+
+        <mvc:interceptor>
+            <mvc:mapping path="/**"/>
+            <bean class="com.codefans.template.web.interceptor.InputInterceptor">
+                <property name="exceptUrls">
+                    <list>
+                        <value>/templateCtl</value>
+                    </list>
+                </property>
+            </bean>
+        </mvc:interceptor>
+
+        <mvc:interceptor>
+            <mvc:mapping path="/**"/>
+            <bean class="com.codefans.template.web.interceptor.UrlInterceptor">
+                <property name="exceptUrls">
+                    <list>
+                        <value>/templateCtl</value>
+                    </list>
+                </property>
+            </bean>
+        </mvc:interceptor>
+
+
+
+    </mvc:interceptors>
 
 </beans>
