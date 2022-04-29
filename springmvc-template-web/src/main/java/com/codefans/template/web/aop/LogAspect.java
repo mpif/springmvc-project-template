@@ -15,7 +15,7 @@ import java.util.List;
  */
 @Aspect
 @Order(1)
-@Component
+//@Component
 public class LogAspect {
 
     /**

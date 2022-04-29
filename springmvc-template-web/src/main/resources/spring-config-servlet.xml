@@ -33,6 +33,7 @@
     <mvc:default-servlet-handler/>
 
     <!--&lt;!&ndash;配置拦截器 拦截除了exceptUrls内的所有请求&ndash;&gt;-->
+    <!--  除非就是要测试过滤器, 否则就注释调, 不然其他请求都无法访问
     <mvc:interceptors>
 
         <mvc:interceptor>
@@ -57,8 +58,7 @@
             </bean>
         </mvc:interceptor>
 
-
-
     </mvc:interceptors>
+    -->
 
 </beans>

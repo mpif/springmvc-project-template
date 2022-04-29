@@ -34,7 +34,7 @@
 	-->
 	<import resource="classpath:spring-config-service.xml"/>
 	<import resource="classpath:spring-config-servlet.xml"/>
-	<import resource="classpath:myframework.xml"/>
+<!--	<import resource="classpath:myframework.xml"/>-->
 	<import resource="classpath:spring-quartz.xml"/>
 
 

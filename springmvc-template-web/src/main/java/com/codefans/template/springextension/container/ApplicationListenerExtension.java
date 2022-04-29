@@ -24,7 +24,7 @@ import org.springframework.web.context.support.ServletRequestHandledEvent;
  * @date 2020/07/23 17:15
  * @since 1.0.0
  */
-@Component
+//@Component
 public class ApplicationListenerExtension implements ApplicationListener {
 
     @Override
