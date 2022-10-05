@@ -38,7 +38,7 @@
 		<junit.version>4.12</junit.version>
 		<slf4j.version>1.7.25</slf4j.version>
 		<logback.version>1.2.3</logback.version>
-		<fasterxml.jackson>2.9.4</fasterxml.jackson>
+		<fasterxml.jackson>2.12.6.1</fasterxml.jackson>
 
 	</properties>
 
